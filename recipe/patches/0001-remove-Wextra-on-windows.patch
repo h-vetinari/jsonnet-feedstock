@@ -1,0 +1,28 @@
+From 045ec401eb074b238c8c9d23bc4c8df5ff93d7c7 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Fri, 15 Jan 2021 14:48:56 +0100
+Subject: [PATCH] remove -Wextra on windows
+
+---
+ Makefile | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 28bd9bc..9474a6a 100644
+--- a/Makefile
++++ b/Makefile
+@@ -31,9 +31,9 @@ OPT ?= -O3
+ 
+ PREFIX ?= /usr/local
+ 
+-CXXFLAGS ?= -g $(OPT) -Wall -Wextra -Woverloaded-virtual -pedantic -std=c++0x -fPIC
++CXXFLAGS ?= -g $(OPT) -Wall -Woverloaded-virtual -pedantic -std=c++0x -fPIC
+ CXXFLAGS += -Iinclude -Ithird_party/md5 -Ithird_party/json
+-CFLAGS ?= -g $(OPT) -Wall -Wextra -pedantic -std=c99 -fPIC
++CFLAGS ?= -g $(OPT) -Wall -pedantic -std=c99 -fPIC
+ CFLAGS += -Iinclude
+ MAKEDEPENDFLAGS += -Iinclude -Ithird_party/md5 -Ithird_party/json
+ EMCXXFLAGS = $(CXXFLAGS) --memory-init-file 0 -s DISABLE_EXCEPTION_CATCHING=0 -s INLINING_LIMIT=50 -s RESERVED_FUNCTION_POINTERS=20 -s ASSERTIONS=1 -s ALLOW_MEMORY_GROWTH=1
+-- 
+2.29.2.windows.3
+
