@@ -9,7 +9,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 23ffcd4d03a10af7b20b53feee16627debe28345a4d7d5ed07881b7444553bfb
   patches:
-    - patches/0001-remove-Wextra-on-windows.patch  # [win]
+    - patches/0001-remove-some-incompatible-compiler-flags-on-windows.patch  # [win]
 
 build:
   number: 1
